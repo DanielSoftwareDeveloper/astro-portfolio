@@ -3,10 +3,10 @@ export const menuLinks = [
         name: "About",
         href: "/",
     },
-    {
+    /**{
         name: "Store",
         href: "/store",
-    },
+    },**/
     {
         name: "Portfolio",
         href: "/portfolio",
@@ -14,11 +14,11 @@ export const menuLinks = [
 ]
 
 export const socialLinks = [
-    //{
-    //    icon: "social/linkedin",
-    //    name: "Linkedin",
-    //    href: "https://www.linkedin.com/in/daniel-reyes-579870303/?trk=opento_sprofile_topcard",
-    //},
+    /*{
+        icon: "social/linkedin",
+        name: "Linkedin",
+        href: "https://www.linkedin.com/in/daniel-reyes-579870303/?trk=opento_sprofile_topcard",
+    },*/
     {
         icon: "social/github",
         name: "Github",
@@ -111,6 +111,10 @@ export const articleList = [
 //ICONS
 export const iconsList = [
     {
+        icon: "app-skills/figma",
+        name: "Figma",
+    },
+    {
         icon: "app-skills/html",
         name: "HTML",
     },
@@ -145,6 +149,14 @@ export const iconsList = [
     {
         icon: "app-skills/prisma",
         name: "Prisma",
+    },
+    {
+        icon: "app-skills/godot",
+        name: "Godot",
+    },
+    {
+        icon: "app-skills/gdscript",
+        name: "GDScript",
     },
     //{
     //    icon: "app-skills/kmp",

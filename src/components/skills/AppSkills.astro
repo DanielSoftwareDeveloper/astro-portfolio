@@ -3,6 +3,6 @@ import { iconsList } from "../../typescript/constants";
 import Skill from "./Skill.astro";
 ---
 
-<div class="content grid grid-cols-10">
+<div class="content flex flex-wrap justify-center gap-10">
     {iconsList.map((svg) => <Skill icon={svg.icon} name={svg.name} />)}
 </div>
