@@ -1,0 +1,12 @@
+---
+import { articleList } from "../../typescript/constants";
+import ArticleCard from "./ArticleCard.astro";
+---
+
+<div class="grid grid-cols-2 gap-8">
+    {
+        articleList.map((product) => (
+            <ArticleCard image={product.image} name={product.name} />
+        ))
+    }
+</div>

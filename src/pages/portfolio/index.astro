@@ -1,0 +1,17 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Title from "../../components/ui/Title.astro";
+import { portfolioProjects } from "../../typescript/constants";
+---
+
+<Layout title="Portfolio">
+    <Title title="Portfolio" />
+    <section class="grid grid-cols-2 md:grid-cols-3 gap-10">
+        {portfolioProjects.map((project) => (
+            <a href={project.href} target="_blank" class="rounded-xl border-item">
+                <img src={project.image} alt={project.name} class="w-full h-60 object-cover rounded-t-xl" />
+                <h3 class="text-sm font-semibold text-center bg-neutral-700 p-2.5 rounded-b-xl">{project.name}</h3>
+            </a>
+        ))}
+    </section>
+</Layout>

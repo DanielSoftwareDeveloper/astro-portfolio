@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Onest Variable', sans-serif;
+}
+
+@layer components {
+    .content {
+        @apply w-[90%] max-w-6xl mx-auto
+    }
+
+    .text-color-1 {
+        @apply text-yellow-300
+    }
+
+    .text-hover {
+        @apply text-rose-400 transition-colors duration-150
+    }
+
+    .button {
+        @apply bg-rose-500 px-2.5 py-2 text-xs md:text-sm font-semibold rounded hover:bg-rose-600 transition-colors duration-150
+    }
+
+    .border-item {
+        @apply border-2 border-neutral-700 hover:border-rose-500 transition-colors duration-150
+    }
+}

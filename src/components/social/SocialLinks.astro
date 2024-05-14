@@ -1,0 +1,14 @@
+---
+import { socialLinks } from "../../typescript/constants";
+import SocialLink from "./SocialLink.astro";
+---
+
+<ul class="flex space-x-3">
+    {
+        socialLinks.map((link) => (
+            <li class="">
+                <SocialLink icon={link.icon} name={link.name} href={link.href} />
+            </li>
+        ))
+    }
+</ul>

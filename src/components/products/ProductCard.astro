@@ -1,0 +1,34 @@
+---
+interface Props {
+    image: string;
+    name: string;
+    desc: string;
+    price: number;
+}
+const { image, name, desc, price } = Astro.props;
+---
+
+<div class="bg-neutral-700 p-3.5 md:p-4 rounded-lg">
+    <a href="/" class="">
+        <img
+            src={image}
+            alt={name}
+            class="w-full h-40 md:h-48 lg:h-52 object-cover rounded-lg mb-3 md:mb-4 hover:opacity-85 transition-opacity duration-150"
+        />
+    </a>
+    <div class="flex flex-col">
+        <a
+            href="/"
+            class="line-clamp-1 hover:text-hover transition-colors duration-150 w-full"
+            ><h3 class="text-sm md:text-base font-semibold line-clamp-1 inline">{name}</h3></a
+        >
+        <p class="line-clamp-2 text-sm text-neutral-300 mt-1 mb-2 md:mb-3">{desc}</p>
+        <p class="text-sm md:text-base font-semibold mb-2 md:mb-3">
+            Price:
+            <span class="text-sm md:text-base font-bold text-teal-400">
+                ${price}
+            </span>
+        </p>
+        <button class="button"> Add to Cart </button>
+    </div>
+</div>
