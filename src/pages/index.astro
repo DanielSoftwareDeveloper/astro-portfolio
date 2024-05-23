@@ -6,41 +6,38 @@ import GameSkills from "../components/skills/GameSkills.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<section class="">
-		<Title title="About" />
-		<div class="grid md:grid-cols-2 gap-6 md:gap-8">
-			<div class="">
-				<h1 class="text-xl font-bold">Daniel Reyes</h1>
-				<h2 class="text-lg font-bold text-color-1">
-					Software Developer
-				</h2>
-				<p class="my-4">
-					I am a Software developer living in Jalisco Mexico. <span
-						class="text-color-1"
-						>My training is in web development</span
-					>, my primary interest is create functional software for the
-					real world. I think that one of the essential goals of our
-					generation is to understand how works technology.
-				</p>
-				<div class="flex space-x-3">
-					<button class="button">Download CV</button>
-					<button class="button">Contact</button>
-				</div>
-			</div>
-			<a href="/portfolio">
-				<img
-					src="https://images.unsplash.com/photo-1711539924834-06816347ff2a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-					alt=""
-					class="w-full h-72 object-cover rounded-xl border-item"
-				/>
-			</a>
-		</div>
-	</section>
-	<hr class="border-neutral-600 my-10" />
-	<section class="">
-		<Title title="Skills" />
-		<AppSkills />
-		<GameSkills />
-		<div class=""></div>
-	</section>
+  <section class="">
+    <Title title="About" />
+    <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+      <div class="">
+        <h1 class="text-xl font-bold">Daniel Reyes</h1>
+        <h2 class="text-lg font-bold text-color-1">Software Developer</h2>
+        <p class="my-4">
+          I am a Software developer living in Jalisco Mexico. <span
+            class="text-color-1">My training is in web development</span
+          >, my primary interest is create functional software for the real
+          world. I think that one of the essential goals of our generation is to
+          understand how works technology.
+        </p>
+        <div class="flex space-x-3">
+          <button class="button">Download CV</button>
+          <button class="button">Contact</button>
+        </div>
+      </div>
+      <a href="/portfolio">
+        <img
+          src="https://images.unsplash.com/photo-1593720213428-28a5b9e94613?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt=""
+          class="w-full h-72 object-cover rounded-xl border-item"
+        />
+      </a>
+    </div>
+  </section>
+  <hr class="border-neutral-600 my-10" />
+  <section class="">
+    <Title title="Skills" />
+    <AppSkills />
+    <GameSkills />
+    <div class=""></div>
+  </section>
 </Layout>
