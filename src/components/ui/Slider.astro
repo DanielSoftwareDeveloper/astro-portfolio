@@ -1,9 +1,5 @@
 ---
 import { portfolioProjects } from "../../typescript/constants";
-// import function to register Swiper custom elements
-import { register } from "swiper/element/bundle";
-// register Swiper custom elements
-register();
 ---
 
 <swiper-container
@@ -25,3 +21,7 @@ register();
     ))
   }
 </swiper-container>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"
+></script>
