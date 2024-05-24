@@ -1,0 +1,27 @@
+---
+import { portfolioProjects } from "../../typescript/constants";
+---
+
+<swiper-container
+  slides-per-view="1"
+  speed="500"
+  loop="true"
+  autoplay-delay="3500"
+  effect="fade"
+>
+  {
+    portfolioProjects.map((project) => (
+      <swiper-slide>
+        <img
+          src={project.image}
+          alt={project.name}
+          class="w-full h-72 object-cover rounded-xl border-item"
+        />
+      </swiper-slide>
+    ))
+  }
+</swiper-container>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"
+></script>

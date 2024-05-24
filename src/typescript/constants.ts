@@ -165,6 +165,10 @@ export const iconsList = [
     icon: "app-skills/gdscript",
     name: "GDScript",
   },
+  {
+    icon: "app-skills/python",
+    name: "Python",
+  },
   //{
   //    icon: "app-skills/kmp",
   //    name: "Kotlin (KMP)",
