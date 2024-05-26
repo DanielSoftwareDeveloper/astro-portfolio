@@ -1,11 +1,14 @@
 ---
 import SocialLinks from "../social/SocialLinks.astro";
+import ThemeIcon from "../ui/ThemeIcon.astro";
 import NavbarLinks from "./NavbarLinks.astro";
 ---
 
-<header class="mt-14">
-    <div class="content flex items-center justify-between text-lg">
-        <div class="flex"><SocialLinks /></div>
-        <div class="flex "><NavbarLinks /></div>
-    </div>
+<header class="sticky top-0">
+  {/*bg-white dark:bg-neutral-800 h-16 sticky top-0*/}
+  <div class="content flex items-center justify-between text-lg">
+    <div class="flex flex-1 justify-start"><SocialLinks /></div>
+    <div class="flex flex-1 justify-center"><NavbarLinks /></div>
+    <div class="flex flex-1 justify-end"><ThemeIcon /></div>
+  </div>
 </header>

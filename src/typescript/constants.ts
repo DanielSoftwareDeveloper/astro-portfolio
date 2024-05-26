@@ -3,10 +3,6 @@ export const menuLinks = [
     name: "About",
     href: "/",
   },
-  /**{
-        name: "Store",
-        href: "/store",
-    },**/
   {
     name: "Portfolio",
     href: "/portfolio",
@@ -28,6 +24,24 @@ export const socialLinks = [
     icon: "social/whatsapp",
     name: "Whatsapp",
     href: "https://wa.me/523318780026",
+  },
+];
+
+//PORTFOLIO
+export const portfolioProjects = [
+  {
+    image: "/random-quotes.png",
+    name: "Random Quotes API",
+    href: "https://random-quotes-api-daniel-reyes.vercel.app/",
+  },
+  {
+    image: "/spotify-clone.png",
+    name: "Spotify clone app",
+    href: "https://spotifyclone-danielsoftware.vercel.app/",
+  },
+  {
+    image: "/videogame.png",
+    name: "Videogame",
   },
 ];
 
@@ -67,29 +81,6 @@ export const productList = [
     name: "Condominium Management",
     desc: "Condominium management system for offices and depertments administration.",
     price: 1500,
-  },
-];
-
-//PORTFOLIO
-export const portfolioProjects = [
-  {
-    image: "/animal-crossing.png",
-    name: "Animal Crossing singlepage",
-    href: "",
-  },
-  {
-    image: "/random-quotes.png",
-    name: "Random Quotes API",
-    href: "https://random-quotes-api-daniel-reyes.vercel.app/",
-  },
-  {
-    image: "/spotify-clone.png",
-    name: "Spotify clone app",
-    href: "https://spotifyclone-danielsoftware.vercel.app/",
-  },
-  {
-    image: "/videogame.png",
-    name: "Videogame",
   },
 ];
 
@@ -174,26 +165,3 @@ export const iconsList = [
   //    name: "Kotlin (KMP)",
   //},
 ];
-
-/**export const gameIconList = [
-    {
-        icon: "game-skills/affinity-designer",
-        name: "Affinity Designer",
-    },
-    {
-        icon: "game-skills/blender",
-        name: "Blender",
-    },
-    {
-        icon: "game-skills/godot",
-        name: "Godot",
-    },
-    {
-        icon: "game-skills/gdscript",
-        name: "GDScript",
-    },
-    {
-        icon: "game-skills/unreal",
-        name: "Unreal Engine",
-    },
-]**/

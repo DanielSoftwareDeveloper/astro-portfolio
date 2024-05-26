@@ -1,12 +1,15 @@
 ---
-import Layout from "../../layouts/Layout.astro";
+import Layout from "../../layouts/Layout.astro"
 import Title from "../../components/ui/Title.astro";
 import { portfolioProjects } from "../../typescript/constants";
 import { Image } from "astro:assets";
 import BackButton from "../../components/ui/BackButton.astro";
 ---
 
-<Layout title="Portfolio">
+<Layout
+  title="Daniel Reyes - Portfolio"
+  description="Proyectos recientes. Mejores proyectos de programacion. Muestra de trabajos."
+>
   <Title title="Portfolio" />
   <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
     {
