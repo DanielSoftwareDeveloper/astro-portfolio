@@ -14,7 +14,7 @@ import BackButton from "../../components/ui/BackButton.astro";
   <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
     {
       portfolioProjects.map((project) => (
-        <a href={project.href} target="_blank" class="rounded-xl border-item">
+        <a href={project.href} target="_blank" class="rounded-2xl border-item">
           <Image
             src={project.image}
             alt={project.name}
@@ -22,7 +22,7 @@ import BackButton from "../../components/ui/BackButton.astro";
             height="100"
             class="w-full h-60 object-cover rounded-t-xl"
           />
-          <h3 class="text-sm font-semibold text-center bg-neutral-700 p-2.5 rounded-b-xl">
+          <h3 class="text-sm font-semibold text-center bg-neutral-700 text-white p-2.5 rounded-b-xl">
             {project.name}
           </h3>
         </a>

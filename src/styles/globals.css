@@ -4,14 +4,13 @@
 
 body {
   font-family: "Onest Variable", sans-serif;
-  height: 100vh;
+
 }
 
 @layer components {
   .content {
     @apply w-[90%] max-w-6xl mx-auto;
   }
-
   .text-color-1 {
     @apply dark:text-yellow-300;
   }
