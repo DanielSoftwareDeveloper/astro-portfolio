@@ -3,12 +3,14 @@ import { menuLinks } from "../../typescript/constants";
 import NavbarLink from "./NavbarLink.astro";
 ---
 
-<ul class="hidden md:flex font-semibold space-x-9">
-    {
-        menuLinks.map((link) => (
-            <li>
-                <NavbarLink name={link.name} href={link.href} />
-            </li>
-        ))
-    }
+<ul
+  class="font-semibold flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-9"
+>
+  {
+    menuLinks.map((link) => (
+      <li>
+        <NavbarLink name={link.name} href={link.href} />
+      </li>
+    ))
+  }
 </ul>
