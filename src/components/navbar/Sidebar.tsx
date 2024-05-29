@@ -28,7 +28,7 @@ export default function Sidebar() {
           open ? "w-[60%]" : "w-0 p-0"
         } fixed bg-neutral-800 text-white top-0 right-0 h-screen shadow-2xl p-8 z-50 transition-all duration-200`}
       >
-        <div className="flex flex-col">
+        <div className={`${!open && "hidden"} flex flex-col`}>
           <ul className="">
             {menuLinks.map((link) => (
               <li className="">
