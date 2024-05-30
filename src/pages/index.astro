@@ -13,6 +13,7 @@ import Slider from "../components/ui/Slider.astro";
     <Title title="About" />
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
       <div class="w-full self-center">
+        {/*order-2 md:order-1 */}
         <h1 class="text-xl font-bold">Daniel Reyes</h1>
         <h2 class="text-lg font-bold text-color-1">Software Developer</h2>
         <p class="text-sm md:text-base text-pretty mt-1.5 mb-3 md:my-4">
@@ -28,7 +29,8 @@ import Slider from "../components/ui/Slider.astro";
           <button class="button">Contact</button>
         </div>
       </div>
-      <a class="w-full" href="/portfolio">
+      <a class="w-full" href="/portfolio"
+        >{/*order-1 md:order-2 */}
         <Slider />
       </a>
     </div>

@@ -1,51 +1,47 @@
-import { useState } from "preact/hooks";
-import { menuLinks, socialLinks } from "../../typescript/constants";
+import { useState } from "react";
+import { IoMdClose, IoMdMenu } from "react-icons/io";
 
-export default function Sidebar() {
+function Sidebar() {
   const [open, setOpen] = useState(false);
 
   return (
     <>
-      {/*Sidebar button*/}
       <button
-        class="text-slate-800 dark:text-slate-100"
+        className="text-neutral-800 dark:text-neutral-100"
         onClick={() => setOpen(true)}
       >
-        x
+        <IoMdMenu size={35} />
       </button>
-
-      {/*Sidebar background*/}
-      <div
-        onClick={() => setOpen(false)}
-        class={`${
-          !open && "hidden"
-        } bg-neutral-700/40 fixed top-0 left-0 w-full h-screen cursor-pointer -z-40`}
-      />
-
-      {/*Sidebar*/}
-      <div
-        class={`${
-          open ? "w-[60%]" : "w-0 p-0"
-        } fixed bg-neutral-800 text-white top-0 right-0 h-screen shadow-2xl p-8 z-50 transition-all duration-200`}
+      <aside
+        className={`${
+          open
+            ? "flex flex-col bg-zinc-100 dark:bg-zinc-800 border-left fixed top-0 right-0 w-80 h-full py-4 px-5 shadow-xl shadow-zinc-90 transition-all duration-300 ease-in-out z-50"
+            : "flex flex-col bg-zinc-100 dark:bg-zinc-800 border-left fixed top-0 -right-80 w-80 h-full py-4 px-5 shadow-xl shadow-zinc-90 transition-all duration-300 ease-in-out z-50"
+        }`}
       >
-        <div className={`${!open && "hidden"} flex flex-col`}>
-          <ul className="">
-            {menuLinks.map((link) => (
-              <li className="">
-                <a href={link.href} className="">
-                  {link.name}
-                </a>
-              </li>
-            ))}
-          </ul>
+        <button
+          onClick={() => setOpen(false)}
+          className="w-full flex justify-end mb-5"
+        >
+          <IoMdClose size={35} />
+        </button>
+        <nav className="">
+          <ul className="flex flex-col"></ul>
+        </nav>
+        <div className="hidden bg-zinc-800 h-44 items-center justify-center rounded-md mt-auto">
+          SocialLinks
         </div>
-        <hr class="border-neutral-600 my-10" />
-        <div class={`${!open && "hidden"} bg-neutral-700 flex justify-center`}>
-          {socialLinks.map((link) => (
-            <p className="">{link.icon}</p>
-          ))}
-        </div>
-      </div>
+      </aside>
+
+      <span
+        onClick={() => setOpen(false)}
+        className={`${
+          open
+            ? "transition duration-300 ease-in-out fixed top-0 left-0 w-full h-screen bg-neutral-700/60 dark:bg-neutral-900/75 z-40"
+            : "opacity-0"
+        }`}
+      />
     </>
   );
 }
+export default Sidebar;

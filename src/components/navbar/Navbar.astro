@@ -6,13 +6,13 @@ import Sidebar from "./Sidebar";
 ---
 
 <header
-  class="bg-white dark:bg-neutral-800 md:bg-none h-16 md:h-0 sticky top-0 z-30"
+  class="bg-white dark:bg-neutral-800 md:bg-none h-16 md:h-0 sticky top-0 border-bottom md:border-none z-30"
 >
   {/**/}
   <div class="content h-full flex items-center justify-between text-lg">
     <div class="hidden md:flex flex-1 justify-start"><SocialLinks /></div>
     <div class="hidden md:flex flex-1 justify-center"><NavbarLinks /></div>
     <div class="flex md:flex-1 md:justify-end"><ThemeIcon /></div>
-    <div class="md:hidden"><Sidebar client:load /></div>
+    <div class="flex items-center md:hidden"><Sidebar client:load /></div>
   </div>
 </header>
