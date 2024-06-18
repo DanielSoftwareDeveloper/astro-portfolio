@@ -1,15 +1,21 @@
 ---
+import { getRelativeLocaleUrl } from "astro:i18n";
 import { menuLinks } from "../../typescript/constants";
 import NavbarLink from "./NavbarLink.astro";
+import type { Lang } from "@/i18n/defaultLangOptions";
+const currentLocale = Astro.currentLocale as Lang;
 ---
 
 <ul
-  class="font-semibold flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-9"
+  class="font-semibold flex md:flex-row md:space-y-0 md:space-x-9 gap-4 md:gap-0"
 >
   {
-    menuLinks.map((link) => (
+    menuLinks[currentLocale].map((link) => (
       <li>
-        <NavbarLink name={link.name} href={link.href} />
+        <NavbarLink
+          name={link.name}
+          href={getRelativeLocaleUrl(currentLocale, link.href)}
+        />
       </li>
     ))
   }

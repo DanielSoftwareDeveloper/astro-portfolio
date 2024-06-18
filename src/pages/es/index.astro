@@ -1,0 +1,47 @@
+---
+import Title from "@/components/ui/Title.astro";
+import Layout from "@/layouts/Layout.astro";
+import AppSkills from "@/components/skills/AppSkills.astro";
+import Slider from "@/components/ui/Slider.astro";
+---
+
+<Layout
+  title="Daniel Reyes - Desarrollador de Software"
+  description="Contrata a Daniel Reyes para crear tu aplicacion Web o Movil. Desarrollador y Programador. Aplicaciones unicas y escalables"
+>
+  <section class="">
+    <Title title="Acerca de" />
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+      <div class="w-full self-center">
+        {/*order-2 md:order-1 */}
+        <h1 class="text-xl font-bold">Daniel Reyes</h1>
+        <h2 class="text-lg font-bold text-color-1">
+          Desarrollador de Software
+        </h2>
+        <p class="text-sm md:text-base text-pretty mt-1.5 mb-3 md:my-4">
+          Soy un desarrollador de Software de Jalisco, Mexico. <span
+            class="font-semibold text-color-1"
+            >Mi formación es en Desarrollo Web</span
+          >, mi principal interés es crear software funcional para el mundo
+          real. Creo que uno de los objetivos esenciales de nuestra generación
+          es comprender cómo funciona la tecnología.
+        </p>
+        <div class="flex space-x-3.5">
+          <a href="/public/DanielCV(es).pdf" download class="button">Descargar CV</a>
+          <a href="https://wa.me/523318780026" target="_blank" class="button"
+            >Contacto</a
+          >
+        </div>
+      </div>
+      <a class="w-full" href="/portfolio"
+        >{/*order-1 md:order-2 */}
+        <Slider />
+      </a>
+    </div>
+  </section>
+  <hr class="border-neutral-300 dark:border-neutral-600 my-10" />
+  <section class="">
+    <Title title="Tecnologias" />
+    <AppSkills />
+  </section>
+</Layout>

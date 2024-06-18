@@ -1,8 +1,9 @@
 ---
 import SocialLinks from "../social/SocialLinks.astro";
+import LanguagePicker from "../ui/LanguagePicker.astro";
 import ThemeIcon from "../ui/ThemeIcon.astro";
 import NavbarLinks from "./NavbarLinks.astro";
-import Sidebar from "./Sidebar";
+import Sidebar from "./_Sidebar";
 ---
 
 <header
@@ -11,8 +12,11 @@ import Sidebar from "./Sidebar";
   {/**/}
   <div class="content h-full flex items-center justify-between text-lg">
     <div class="hidden md:flex flex-1 justify-start"><SocialLinks /></div>
-    <div class="hidden md:flex flex-1 justify-center"><NavbarLinks /></div>
-    <div class="flex md:flex-1 md:justify-end"><ThemeIcon /></div>
-    <div class="flex items-center md:hidden"><Sidebar client:load /></div>
+    <div class="md:flex flex-1 justify-center"><NavbarLinks /></div>
+    <div class="flex items-center md:flex-1 md:justify-end space-x-6">
+      <LanguagePicker />
+      <ThemeIcon />
+    </div>
+    <div class="hidden items-center md:hidden"><Sidebar client:load /></div>
   </div>
 </header>

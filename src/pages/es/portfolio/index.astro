@@ -1,0 +1,33 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Title from "@/components/ui/Title.astro";
+import { portfolioProjects } from "@/typescript/constants";
+import { Image } from "astro:assets";
+import BackButton from "@/components/ui/BackButton.astro";
+---
+
+<Layout
+  title="Daniel Reyes - Portafolio"
+  description="Proyectos recientes. Mejores proyectos de programacion. Muestra de trabajos."
+>
+  <Title title="Portafolio" />
+  <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+    {
+      portfolioProjects.map((project) => (
+        <a href={project.href} target="_blank" class="rounded-2xl border-item">
+          <Image
+            src={project.image}
+            alt={project.name}
+            width="100"
+            height="100"
+            class="w-full h-60 object-cover rounded-t-xl"
+          />
+          <h3 class="text-sm font-semibold text-center bg-neutral-700 text-white p-2.5 rounded-b-xl">
+            {project.name}
+          </h3>
+        </a>
+      ))
+    }
+  </section>
+  <BackButton text="Regresar a Inicio" />
+</Layout>

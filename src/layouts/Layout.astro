@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import "@fontsource-variable/onest";
 import Footer from "../components/ui/Footer.astro";
 import Navbar from "../components/navbar/Navbar.astro";
+import { Icon } from "astro-icon/components";
 
 interface Props {
   title: string;
@@ -10,10 +11,12 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+
+const currentLocale = Astro.currentLocale;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={currentLocale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -30,6 +33,16 @@ const { title, description } = Astro.props;
     <main class="content my-12 md:my-16 lg:my-20">
       <slot />
     </main>
-    <Footer />
+    <Footer>
+      <p
+        class="flex items-center text-sm font-bold text-neutral-500 dark:text-neutral-400"
+      >
+        {
+          currentLocale === "es"
+            ? "Hecho con por Daniel Reyes"
+            : "Made with by Daniel Reyes"
+        }
+      </p>
+    </Footer>
   </body>
 </html>

@@ -1,3 +1,4 @@
+import { menuLinks } from "@/typescript/constants";
 import { useState } from "react";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
 
@@ -26,7 +27,13 @@ function Sidebar() {
           <IoMdClose size={35} />
         </button>
         <nav className="">
-          <ul className="flex flex-col"></ul>
+          <ul className="flex flex-col">
+            {menuLinks.en.map((link) => (
+              <a href={link.name} className="">
+                {link.name}
+              </a>
+            ))}
+          </ul>
         </nav>
         <div className="hidden bg-zinc-800 h-44 items-center justify-center rounded-md mt-auto">
           SocialLinks

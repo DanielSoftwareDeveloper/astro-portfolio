@@ -1,13 +1,25 @@
-export const menuLinks = [
-  {
-    name: "About",
-    href: "/",
-  },
-  {
-    name: "Portfolio",
-    href: "/portfolio",
-  },
-];
+export const menuLinks = {
+  en: [
+    {
+      name: "About",
+      href: "/",
+    },
+    {
+      name: "Portfolio",
+      href: "/portfolio",
+    },
+  ],
+  es: [
+    {
+      name: "Acerca de",
+      href: "/",
+    },
+    {
+      name: "Portafolio",
+      href: "/portfolio",
+    },
+  ],
+};
 
 export const socialLinks = [
   /*{
@@ -144,10 +156,10 @@ export const iconsList = [
     icon: "app-skills/astro",
     name: "Astro",
   },
-  {
+  /*{
     icon: "app-skills/prisma",
     name: "Prisma",
-  },
+  },*/
   {
     icon: "app-skills/godot",
     name: "Godot",

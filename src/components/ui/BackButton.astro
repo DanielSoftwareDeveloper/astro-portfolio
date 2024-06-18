@@ -1,11 +1,18 @@
 ---
+import type { Lang } from '@/i18n/defaultLangOptions';
+import { getRelativeLocaleUrl } from 'astro:i18n';
 
+interface Props {
+  text: string;
+}
+const { text } = Astro.props;
+const currentLocale = Astro.currentLocale as Lang;
 ---
 
 <div class="mt-12">
   <a
-    href="/"
+    href={getRelativeLocaleUrl(currentLocale, "/")}
     class="text-base font-semibold text-blue-500 dark:text-blue-400 hover:opacity-80 transition duration-150"
-    >Back to home</a
+    >{text}</a
   >
 </div>
